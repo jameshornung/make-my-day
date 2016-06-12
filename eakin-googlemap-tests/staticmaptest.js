@@ -25,6 +25,6 @@ var date = Choices.dateNights.dateOne;
 
     $(document).ready(function() {
     $('#button').on('click', function() {
-        $('#map').html("<img src='https://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=roadmap&markers=color:" + date.restaurant.markerColor + "%7Clabel:" + date.restaurant.labelLetter + "%7C" + date.restaurant.address + "&markers=color:red%7Clabel:B%7C2307+Manor+Rd,Austin,TX+78722&key=AIzaSyAO1ybpbxzx7RMHZHcwK_-S48cRjMmWJcI' alt='map'>");
+        $('#map').html("<img src='https://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=roadmap&markers=color:" + date.restaurant.markerColor + "%7Clabel:" + date.restaurant.labelLetter + "%7C" + date.restaurant.address + "&markers=color:" + date.bar.markerColor + "%7Clabel:"+ date.bar.labelLetter + "%7C" + date.bar.address + "&key=AIzaSyAO1ybpbxzx7RMHZHcwK_-S48cRjMmWJcI' alt='map'>");
     })
 })
