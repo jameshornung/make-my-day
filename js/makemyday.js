@@ -8,7 +8,7 @@ var Choices = {
                     address: '1917+manor+road,austin,tx',
                     labelLetter: 'S',
                     markerColor: 'blue',
-                    placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc281917'
+                    placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
                 },
                 bar: {
                     name: 'Butterfly Bar',
@@ -25,25 +25,55 @@ var date = Choices.dateNights.dateOne;
 
 
 /////////add a custom icon to labelLetter! /////////////
-
-$.ajax({
-    url: 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + date.bar.placeID + '&key=AIzaSyC1HEKxkiAsyrFzLSt_Mm39q0_lR8U4UgU',
-    type: 'GET',
-    crossDomain: true,
-    dataType: 'jsonp'
-})
-.done(function(response) {
-    console.log("success")
-    console.log(response);
-})
-.fail(function() {
-    console.log("error");
-});
-
-
-
 $(document).ready(function() {
     $('#make-my-day').on('click', function() {
-        $('#googlemap').html("<img src='https://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=roadmap&markers=color:" + date.restaurant.markerColor + "%7Clabel:" + date.restaurant.labelLetter + "%7C" + date.restaurant.address + "&markers=color:" + date.bar.markerColor + "%7Clabel:" + date.bar.labelLetter + "%7C" + date.bar.address + "&key=AIzaSyC1HEKxkiAsyrFzLSt_Mm39q0_lR8U4UgU' alt='map'>");
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('googlemap'), {
+                // got lazy, set the center to Austin
+                center: { lat: 30.267153, lng: -97.743061 },
+                zoom: 10
+            });
+        }
+        initMap();
+        var infowindow = new google.maps.InfoWindow();
+        var restaurant = new google.maps.places.PlacesService(map);
+        var bar = new google.maps.places.PlacesService(map);
+
+        restaurant.getDetails({
+            placeId: date.restaurant.placeID
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
+                    infowindow.open(map, this);
+                });
+            }
+        });
+        bar.getDetails({
+            placeId: date.bar.placeID
+        }, function(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                var marker2 = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+                google.maps.event.addListener(marker2, 'click', function() {
+                    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
+                    infowindow.open(map, this);
+                });
+            }
+        });
+        var service = new google.maps.places.PlacesService(document.getElementById('googleplacedata').appendChild(document.createElement('div')));
     })
 })
+
+
+
+
+// $('#googlemap').html("<img src='https://maps.googleapis.com/maps/api/staticmap?size=300x300&maptype=roadmap&markers=color:" + date.restaurant.markerColor + "%7Clabel:" + date.restaurant.labelLetter + "%7C" + date.restaurant.address + "&markers=color:" + date.bar.markerColor + "%7Clabel:" + date.bar.labelLetter + "%7C" + date.bar.address + "&key=AIzaSyC1HEKxkiAsyrFzLSt_Mm39q0_lR8U4UgU' alt='map'>");
