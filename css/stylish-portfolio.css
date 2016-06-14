@@ -264,3 +264,27 @@ hr.small {
 footer {
     padding: 100px 0;
 }
+/*APIS */
+
+#googlemap {
+    width: 50%;
+    height: 550px;
+    background-color: green;
+}
+
+#yelp {
+    width: 50%;
+    height: 275px;
+    background-color: blue;
+}
+
+#instagram {
+    width: 50%;
+    height: 275px;
+    background-color: red;
+}
+
+.searchresults{
+    position: relative;
+    float: left;
+}
