@@ -1,4 +1,4 @@
-////////////// VARIABLE DECLARATION
+////////////// VARIABLE DECLARATION ////////////////////////
 var Choices = {
         dateNights: {
             dateOne: {
