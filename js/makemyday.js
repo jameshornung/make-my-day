@@ -7,6 +7,7 @@ var Choices = {
             address: '1917+manor+road,austin,tx',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
         },
         bar: {
@@ -14,6 +15,7 @@ var Choices = {
             address: '2307+Manor+Rd,Austin,TX+78722',
             labelLetter: 'B',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
         }
     }, {
@@ -23,6 +25,7 @@ var Choices = {
             address: '1917+manor+road,austin,tx',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
         },
         bar: {
@@ -30,6 +33,7 @@ var Choices = {
             address: '2307+Manor+Rd,Austin,TX+78722',
             labelLetter: 'B',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
         }
     }, {
@@ -39,6 +43,7 @@ var Choices = {
             address: '1917+manor+road,austin,tx',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
         },
         bar: {
@@ -46,6 +51,7 @@ var Choices = {
             address: '2307+Manor+Rd,Austin,TX+78722',
             labelLetter: 'B',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
         }
     }, {
@@ -55,6 +61,7 @@ var Choices = {
             address: '1917+manor+road,austin,tx',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
         },
         bar: {
@@ -62,6 +69,7 @@ var Choices = {
             address: '2307+Manor+Rd,Austin,TX+78722',
             labelLetter: 'B',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
         }
     }, {
@@ -71,6 +79,7 @@ var Choices = {
             address: '1917+manor+road,austin,tx',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
         },
         bar: {
@@ -78,6 +87,7 @@ var Choices = {
             address: '2307+Manor+Rd,Austin,TX+78722',
             labelLetter: 'B',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
         }
     }],
@@ -88,6 +98,7 @@ var Choices = {
             address: '801+Red+River+St,Austin,TX+78701',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJSVyqJ6S1RIYRdx8PPPRl9Is'
         },
         bar: {
@@ -95,6 +106,7 @@ var Choices = {
             address: '121+E+5th+St,Austin,TX+78701',
             labelLetter: 'H',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }, {
@@ -104,6 +116,7 @@ var Choices = {
             address: '801+Red+River+St,Austin,TX+78701',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJSVyqJ6S1RIYRdx8PPPRl9Is'
         },
         bar: {
@@ -111,6 +124,7 @@ var Choices = {
             address: '121+E+5th+St,Austin,TX+78701',
             labelLetter: 'H',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }, {
@@ -120,6 +134,7 @@ var Choices = {
             address: '801+Red+River+St,Austin,TX+78701',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJSVyqJ6S1RIYRdx8PPPRl9Is'
         },
         bar: {
@@ -127,6 +142,7 @@ var Choices = {
             address: '121+E+5th+St,Austin,TX+78701',
             labelLetter: 'H',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }, {
@@ -136,6 +152,7 @@ var Choices = {
             address: '801+Red+River+St,Austin,TX+78701',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJSVyqJ6S1RIYRdx8PPPRl9Is'
         },
         bar: {
@@ -143,6 +160,7 @@ var Choices = {
             address: '121+E+5th+St,Austin,TX+78701',
             labelLetter: 'H',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }, {
@@ -152,6 +170,7 @@ var Choices = {
             address: '801+Red+River+St,Austin,TX+78701',
             labelLetter: 'S',
             markerColor: 'blue',
+            type: 'restaurant',
             placeID: 'ChIJSVyqJ6S1RIYRdx8PPPRl9Is'
         },
         bar: {
@@ -159,6 +178,7 @@ var Choices = {
             address: '121+E+5th+St,Austin,TX+78701',
             labelLetter: 'H',
             markerColor: 'red',
+            type: 'bar',
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }],
@@ -186,7 +206,8 @@ function theFunction(date) {
         var newLocation = new google.maps.places.PlacesService(map);
         /// stores data from the date choice. NEEDS PARKING INFO ///
         var locationArray = [date.restaurant.placeID, date.bar.placeID];
-
+        var labelArray = [date.restaurant.labelLetter, date.bar.labelLetter];
+        var latLngArray = [];
         /// generates markers and corresponding dynamic html
         for (i = 0; i < locationArray.length; i++) {
             newLocation.getDetails({
@@ -202,6 +223,8 @@ function theFunction(date) {
                     $('#googleplacedata').append('<div>Hours</div><div>' + place.opening_hours.weekday_text[0] + '<br>' + place.opening_hours.weekday_text[1] + '<br>' + place.opening_hours.weekday_text[2] + '<br>' + place.opening_hours.weekday_text[3] + '<br>' + place.opening_hours.weekday_text[4] + '<br>' + place.opening_hours.weekday_text[5] + '<br>' + place.opening_hours.weekday_text[6] + '<br>' + '</div>');
                     /// changes map size
                     bounds.extend(marker.position);
+                    latLngArray.push(marker.position);
+                    console.log(latLngArray);
                     /// makes markers clickable
                     google.maps.event.addListener(marker, 'click', function() {
                         infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
