@@ -221,19 +221,16 @@ $(document).ready(function() {
     $('#dropdownMenu1').on('click', function(date) {
         $('#make-my-day').show('slow');
         var date = Choices.dateNights[Math.floor(Math.random() * Choices.dateNights.length)];
-        console.log(date);
         theFunction(date);
     });
     $('#dropdownMenu3').on('click', function(date) {
         $('#make-my-day').show('slow');
         var date = Choices.totallyAustin[Math.floor(Math.random() * Choices.totallyAustin.length)];
-        console.log(date);
         theFunction(date);
     });
     $('#dropdownMenu2').on('click', function(date) {
         $('#make-my-day').show('slow');
         var date = Choices.happyHour[Math.floor(Math.random() * Choices.happyHour.length)];
-        console.log(date);
         theFunction(date);
     });
 })
