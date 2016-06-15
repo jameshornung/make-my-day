@@ -273,10 +273,11 @@ footer {
     background-color: green;
 }
 
-#yelp {
+#googleplacedata {
     width: 50%;
-    height: 275px;
+    height: 500px;
     background-color: blue;
+    color: white;
 }
 
 #instagram {
