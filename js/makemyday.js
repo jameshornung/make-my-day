@@ -47,8 +47,10 @@ $(document).ready(function() {
             if (status === google.maps.places.PlacesServiceStatus.OK) {
                 var marker = new google.maps.Marker({
                     map: map,
-                    position: place.geometry.location
+                    position: place.geometry.location,
                 });
+                $('#googleplacedata').append('<div>Restaurant</div><div>' + place.name +'<br>' +place.formatted_address +'<br>'+ 'Price Level: ' + place.price_level + '<br>' + place.international_phone_number + '</div>');
+                $('#googleplacedata').append('<div>Hours</div><div>' + place.opening_hours.weekday_text[0]+'<br>'+ place.opening_hours.weekday_text[1]+'<br>' + place.opening_hours.weekday_text[2]+'<br>'+ place.opening_hours.weekday_text[3]+'<br>'+place.opening_hours.weekday_text[4]+'<br>'+place.opening_hours.weekday_text[5]+'<br>'+place.opening_hours.weekday_text[6]+'<br>'+'</div>');
                 google.maps.event.addListener(marker, 'click', function() {
                     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
                     infowindow.open(map, this);
@@ -63,6 +65,8 @@ $(document).ready(function() {
                     map: map,
                     position: place.geometry.location
                 });
+                 $('#googleplacedata').append('<div>Bar</div><div>' + place.name +'<br>' +place.formatted_address +'<br>'+ 'Price Level: ' + place.price_level + '<br>' + place.international_phone_number + '</div>');
+                $('#googleplacedata').append('<div>Hours</div><div>' + place.opening_hours.weekday_text[0]+'<br>'+ place.opening_hours.weekday_text[1]+'<br>' + place.opening_hours.weekday_text[2]+'<br>'+ place.opening_hours.weekday_text[3]+'<br>'+place.opening_hours.weekday_text[4]+'<br>'+place.opening_hours.weekday_text[5]+'<br>'+place.opening_hours.weekday_text[6]+'<br>'+'</div>');
                 google.maps.event.addListener(marker2, 'click', function() {
                     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
                     infowindow.open(map, this);

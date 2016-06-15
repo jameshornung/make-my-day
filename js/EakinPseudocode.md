@@ -24,3 +24,4 @@ Next, I need to figure out how to center the map and how to draw maps between ma
 
 Where I left off:
 TRYING TO FIGURE OUT HOW TO GET THE DATA FROM THE PLACES DETAILS LIST
+how to center a map on dropped markers
