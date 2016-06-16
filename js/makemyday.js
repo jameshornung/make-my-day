@@ -258,12 +258,4 @@ $(document).ready(function() {
         var date = Choices.happyHour[Math.floor(Math.random() * Choices.happyHour.length)];
         theFunction(date);
     });
-
-
-
-
-
-
-
-
 })
