@@ -65,9 +65,10 @@
     				</ul>
   					</div>
 
-  		<a href="#about" class="btn btn-dark btn-lg">Make My Day</a>		
-        </div>
-        
+  		<a href="#about" button type="button" class="btn btn-dark btn-lg">Make My Day</a>
+
+         </div>
+
     </header>
   
 
@@ -278,18 +279,13 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+    <script type="text/javascript">
+        function unhide(about) {
+        var item = document.getElementById(divID);
+        if (item) {
+        item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }};
+    
 
     // Scrolls to the selected menu item on the page
     $(function() {
