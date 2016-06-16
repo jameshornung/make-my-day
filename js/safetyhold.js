@@ -149,4 +149,9 @@ function setMarkers(map, locations) {
         bounds.extend(myLatLng);
     }
     map.fitBounds(bounds);
+
+  
+
+
+
 }

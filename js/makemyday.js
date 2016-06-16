@@ -239,6 +239,7 @@ function theFunction(date) {
 }
 
 $(document).ready(function() {
+    $(this).scrollTop(0);
     $('#make-my-day').hide();
 
     $('#dropdownMenu1').on('click', function(date) {
@@ -256,4 +257,12 @@ $(document).ready(function() {
         var date = Choices.happyHour[Math.floor(Math.random() * Choices.happyHour.length)];
         theFunction(date);
     });
+
+
+
+
+
+
+
+
 })

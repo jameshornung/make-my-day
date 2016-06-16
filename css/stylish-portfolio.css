@@ -281,20 +281,19 @@ footer {
 #googlemap {
     width: 50%;
     height: 550px;
-    background-color: green;
 }
 
 #googleplacedata {
     width: 50%;
-    height: 500px;
-    background-color: blue;
+    height: 275px;
     color: white;
+    overflow: auto;
+    text-align: center;
 }
 
-#instagram {
+#savedSpace {
     width: 50%;
     height: 275px;
-    background-color: red;
 }
 
 .searchresults{
@@ -332,4 +331,5 @@ font-size: 1.25em;
 .text-muted {
     color: black;
 }
+
 
