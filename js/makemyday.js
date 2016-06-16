@@ -239,7 +239,7 @@ function theFunction(date) {
 }
 
 $(document).ready(function() {
-    $(this).scrollTop(0);
+    // $(this).scrollTop(0);
     $('#make-my-day').hide();
 
     $('#dropdownMenu1').on('click', function(date) {
