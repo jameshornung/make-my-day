@@ -219,8 +219,9 @@ function theFunction(date) {
                         position: place.geometry.location,
                     });
                     /// dynamic html
-                    $('#googleplacedata').append('<div>' + place.name + '</div><div>' + place.formatted_address + '<br>' + 'Price Level: ' + place.price_level + '<br>' + place.international_phone_number + '</div>');
-                    $('#googleplacedata').append('<div>Hours</div><div>' + place.opening_hours.weekday_text[0] + '<br>' + place.opening_hours.weekday_text[1] + '<br>' + place.opening_hours.weekday_text[2] + '<br>' + place.opening_hours.weekday_text[3] + '<br>' + place.opening_hours.weekday_text[4] + '<br>' + place.opening_hours.weekday_text[5] + '<br>' + place.opening_hours.weekday_text[6] + '<br>' + '</div>');
+                    $('#googleplacedata').append('<div class="placeNameData">' + place.name + '</div><div class="placeFormattedAddressData">' + place.formatted_address + '</div><div class="placePriceLevelData">' + 'Price Level: ' + place.price_level + '</div><div class="placePhoneNumberData">' + place.international_phone_number + '</div>');
+                    $('#googleplacedata').append('<div class="placeHoursTitleData">Hours</div><div class="placeHoursData">' + place.opening_hours.weekday_text[0] + '<br>' + place.opening_hours.weekday_text[1] + '<br>' + place.opening_hours.weekday_text[2] + '<br>' + place.opening_hours.weekday_text[3] + '<br>' + place.opening_hours.weekday_text[4] + '<br>' + place.opening_hours.weekday_text[5] + '<br>' + place.opening_hours.weekday_text[6] + '<br>' + '</div>');
+                    $('#googleplacedata').append('<div class="placeWebsiteData"><a href="' + place.website + '">' + place.website + '</a></div>')
                     /// changes map size
                     bounds.extend(marker.position);
                     latLngArray.push(marker.position);
@@ -239,7 +240,7 @@ function theFunction(date) {
 }
 
 $(document).ready(function() {
-    $(this).scrollTop(0);
+    // $(this).scrollTop(0);
     $('#make-my-day').hide();
 
     $('#dropdownMenu1').on('click', function(date) {
@@ -257,12 +258,4 @@ $(document).ready(function() {
         var date = Choices.happyHour[Math.floor(Math.random() * Choices.happyHour.length)];
         theFunction(date);
     });
-
-
-
-
-
-
-
-
 })
