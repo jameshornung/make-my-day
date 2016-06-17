@@ -1,6 +1,7 @@
 ////////////// VARIABLE DECLARATION ////////////////////////
 var Choices = {
-    dateNights: [{
+    dateNights: [
+    {
         parking: {},
         restaurant: {
             name: 'Salty Sow',
@@ -17,80 +18,104 @@ var Choices = {
             markerColor: 'red',
             type: 'bar',
             placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
-        }
-    }, {
+        },
+        zipCode: '78722'
+    }, 
+    {
         parking: {},
         restaurant: {
-            name: 'Salty Sow',
-            address: '1917+manor+road,austin,tx',
+            name: 'Second Bar and Kitchen',
+            address: '200+congress+avenue+austin+TX',
             labelLetter: 'S',
             markerColor: 'blue',
             type: 'restaurant',
-            placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
+            placeID: 'ChIJjxgwfgi1RIYRFkkL2iIIb8g'
         },
         bar: {
-            name: 'Butterfly Bar',
-            address: '2307+Manor+Rd,Austin,TX+78722',
-            labelLetter: 'B',
+            name: 'Garage',
+            address: '503+colorado+street+austin+tx',
+            labelLetter: 'G',
             markerColor: 'red',
             type: 'bar',
-            placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
-        }
-    }, {
+            placeID: 'ChIJWdi3AAm1RIYRVOzVjpc3hOQ'
+        },
+        event: {
+            name: 'The Elephant Room',
+            address: '315+congress+avenue+austin+tx',
+            labelLetter: 'E',
+            markerColor: 'red',
+            type: 'bar',
+            placeID: 'ChIJ5ckHaQi1RIYRc48001D9cm4'
+        },
+        zipCode: '78701'
+    },
+    {
         parking: {},
         restaurant: {
-            name: 'Salty Sow',
-            address: '1917+manor+road,austin,tx',
-            labelLetter: 'S',
+            name: 'Foreign and Domestic',
+            address: '306+east+53rd+street+austin+tx',
+            labelLetter: 'F',
             markerColor: 'blue',
             type: 'restaurant',
-            placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
+            placeID: 'ChIJEaO0VhPKRIYRmmIiuYiG3hw'
         },
         bar: {
-            name: 'Butterfly Bar',
-            address: '2307+Manor+Rd,Austin,TX+78722',
-            labelLetter: 'B',
+            name: 'Drink.Well',
+            address: '207+east+53rd+street+austin+tx',
+            labelLetter: 'D',
             markerColor: 'red',
             type: 'bar',
-            placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
-        }
-    }, {
+            placeID: 'ChIJc262qWzKRIYRxo9PBUampxk'
+        },
+        zipCode: '78751'
+    },
+    {
         parking: {},
         restaurant: {
-            name: 'Salty Sow',
-            address: '1917+manor+road,austin,tx',
-            labelLetter: 'S',
+            name: 'Henris Cheese and Wine',
+            address: '2026+south+lamar+boulevard+austin+tx',
+            labelLetter: 'H',
             markerColor: 'blue',
             type: 'restaurant',
-            placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
+            placeID: 'ChIJ7wS0Lt-0RIYRUoaTLrbKLWk'
         },
         bar: {
-            name: 'Butterfly Bar',
-            address: '2307+Manor+Rd,Austin,TX+78722',
-            labelLetter: 'B',
+            name: 'Opa Coffee and Wine Bar',
+            address: '2050+south+lamar+boulevard+austin+tx',
+            labelLetter: 'O',
             markerColor: 'red',
             type: 'bar',
-            placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
-        }
-    }, {
-        parking: {},
-        restaurant: {
-            name: 'Salty Sow',
-            address: '1917+manor+road,austin,tx',
-            labelLetter: 'S',
-            markerColor: 'blue',
-            type: 'restaurant',
-            placeID: 'ChIJ61i-aZO1RIYRKgxgoJHJc28'
+            placeID: 'ChIJL5GO19i0RIYRkg9oMW_kpFs'
         },
-        bar: {
-            name: 'Butterfly Bar',
-            address: '2307+Manor+Rd,Austin,TX+78722',
-            labelLetter: 'B',
-            markerColor: 'red',
-            type: 'bar',
-            placeID: 'ChIJ_SqzjOy1RIYR09ZBlUuVbyc'
-        }
+        zipCode: '78704'
     }],
+//Template----------------------------------------------
+    // {
+    //     parking: {},
+    //     restaurant: {
+    //         name: '',
+    //         address: '',
+    //         labelLetter: '',
+    //         markerColor: '',
+    //         type: '',
+    //         placeID: ''
+
+    //     },
+    //     bar: {
+    //         name: '',
+    //         address: '',
+    //         labelLetter: '',
+    //         markerColor: '',
+    //         type: '',
+    //         placeID: ''
+    //     },
+    //     zipCode:
+    //     },
+
+// }],
+
+//TOTALLY AUSTIN========================================
+
     totallyAustin: [{
         parking: {},
         restaurant: {
@@ -182,8 +207,10 @@ var Choices = {
             placeID: 'ChIJixveLgi1RIYRg-FziMQPbwk'
         }
     }],
+
+    //HAPPY HOUR================================================
     happyHour: [{}, {}, {}, {}, {}]
-}
+};
 
 function theFunction(date) {
     /////////add a custom icon to labelLetter! /////////////
