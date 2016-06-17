@@ -209,7 +209,67 @@ var Choices = {
     }],
 
     //HAPPY HOUR================================================
-    happyHour: [{}, {}, {}, {}, {}]
+    happyHour: [{
+        parking: {},
+        restaurant: {
+            name: 'Takoba',
+            address: '1411+east+7th+street+austin+tx',
+            labelLetter: 'T',
+            markerColor: 'blue',
+            type: 'restaurant',
+            placeID: 'ChIJGWJ6krC1RIYRTjImg9W2fNk'
+        },
+        bar: {
+            name: 'Shangri-La',
+            address: '1016+east+sixth+street+austin+tx',
+            labelLetter: 'S',
+            markerColor: 'red',
+            type: 'bar',
+            placeID: 'ChIJwc9096-1RIYRIEXZT4wwdNk'
+        },
+        zipCode: '78702'
+    },
+    {
+    parking: {},
+    restaurant: {
+        name: 'Bangers Sausage House and Beer Garden',
+        address: '79+rainey+street+austin+tx',
+        labelLetter: 'B',
+        markerColor: 'blue',
+        type: 'restaurant',
+        placeID: 'ChIJ20zQ16u1RIYRHXxs8v4BacY'
+    },
+    bar: {
+        name: 'The Blackheart',
+        address: '86+rainey+street+austin+tx',
+        labelLetter: 'B',
+        markerColor: 'red',
+        type: 'bar',
+        placeID: 'ChIJsRlvd6m1RIYRqhaAjwWlnpo'
+    },
+    zipCode: '78701'
+},
+{
+    parking: {},
+    restaurant: {
+        name: 'Torchys Tacos',
+        address: '1822+south+congress+avenue+austin+tx',
+        labelLetter: 'T',
+        markerColor: 'blue',
+        type: 'restaurant',
+        placeID: 'ChIJi1wGI9O0RIYRptZhcRFaglw'
+    },
+    bar: {
+        name: 'The South Congress Hotel',
+        address: '1603+south+congress+avenue+austin+tx',
+        labelLetter: 'S',
+        markerColor: 'red',
+        type: 'bar',
+        placeID: 'ChIJh91qhvy0RIYRtJ71kCXMjsc'
+    },
+    zipCode: '78704'
+} 
+    ]
 };
 
 function theFunction(date) {
@@ -223,7 +283,36 @@ function theFunction(date) {
                 center: { lat: 30.267153, lng: -97.743061 },
                 zoom: 15
             });
+
         }
+        //creates an ajax call to determine the weather at a specific zip code
+        function showWeather(){
+            console.log('weather');
+            var key = '7f2c1ad71abdf07a660a8667474497f2';
+            var zip = date.zipCode;
+            var requestURL = 'http://api.openweathermap.org/data/2.5/weather?zip=' + zip + ',us&units=imperial&APPID=' + key 
+            
+            $.ajax({
+                url: requestURL,
+                method: 'GET'
+            })
+            .done(function(response){
+
+                var currentTemp = $('<p>').text('Current Temp: ' + Math.round(response.main.temp) + ' degrees');
+                var highTemp = $('<p>').text('High Today: ' + Math.round(response.main.temp_max) + ' degrees');
+                var humidity = $('<p>').text('Humidity: ' + response.main.humidity + ' percent');
+                var windSpeed = $('<p>').text('Wind Speed: ' + response.wind.speed + ' mph');
+
+                $('#weather').html('');
+                
+                $('#weather').append(currentTemp);
+                $('#weather').append(highTemp);
+                $('#weather').append(humidity);
+                $('#weather').append(windSpeed);
+
+            })
+        };
+        showWeather();
         initMap();
         /// creates clickable markers
         var infowindow = new google.maps.InfoWindow();
@@ -264,7 +353,7 @@ function theFunction(date) {
             });
         };
     })
-}
+};
 
 $(document).ready(function() {
     // $(this).scrollTop(0);
@@ -284,5 +373,5 @@ $(document).ready(function() {
         $('#make-my-day').show('slow');
         var date = Choices.happyHour[Math.floor(Math.random() * Choices.happyHour.length)];
         theFunction(date);
-    });
-})
+    })
+});
